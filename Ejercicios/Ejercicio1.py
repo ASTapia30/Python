@@ -17,8 +17,8 @@ for i in range (1, num1):
     if (num2 % i == 0):
         MCD2.append(i)
 
-print(MCD1)
-print(MCD2)
+print(f"Listado de múltiplos del número 1: {MCD1}")
+print(f"Listado de múltiplos del número 2: {MCD2}")
 
 #Verificamos primero que lista es mayor. Luego comparamos los elementos que sean similares en ambas listas y creamos una nueva con esos elementos
 if (len(MCD1) > len(MCD2)):
