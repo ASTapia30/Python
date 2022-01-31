@@ -4,10 +4,19 @@ ejemplos de frases palíndromas son las siguientes:
 «Isaac no ronca así»
 «Sometamos o matemos»'''
 
-frase = "Isaac no ronca asi"
-palabras = frase.split()
-palabras = list(reversed(palabras))
-nueva = " ".join(palabras)
-nueva.replace(""," ")
-print(nueva)
+frase = "Sometamos o matemos"
+frase_min = frase.lower()
+frase_pegada = frase_min.replace(" ", "")
+longitud_frase = frase_pegada.__len__()
+nueva_frase =[]
+for i in range(1,frase_pegada.__len__()+1):
+    nueva_frase.append(frase_pegada[frase_pegada.__len__() - i])
 
+# print(nueva_frase)
+frase_comparar = "".join(nueva_frase)
+# print(frase_min)
+# print(frase_comparar)
+
+if frase_pegada == frase_comparar:
+    print(f"La frase: {frase}... SÍ es palíndroma")
+else: print(f"La frase: {frase}... NO es palíndroma")
